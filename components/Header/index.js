@@ -9,31 +9,48 @@
 //  </div >
 // And add it to the DOM in the .headerContainer component
 
-function Header(headerinfo) {
+
+
+function Header() {
     // Header
-    const header =document.createElement('div');
+    const header = document.createElement('div');
     //Date
-    const headerDate = document.createElement('span');
+    const date = document.createElement('span');
     //Title
-    const headerTitle = document.createElement('h1');
+    const title = document.createElement('h1');
     //Temp
-    const headerTemp = document.createElement('span');
+    const temp = document.createElement('span');
 
 
 //Structure Elements
 
-header.appendChild(headerSection);
-headerDate.appendChild(date);
-headerTitle.appendChild(title);
-headerTemp.appendChild(temp);
+// header.appendChild(headerSection);
+header.appendChild(date);
+header.appendChild(title);
+header.appendChild(temp);
 
 //Class Names
 header.classList.add('header');
-headerDate.classList.add('date');
-headerTemp/classList.add('temp');
+date.classList.add('date');
+temp.classList.add('temp');
 
 
 //Set Content
 
-headerSection.textContent = headerinfo
+date.textContent = "SMARCH 28, 2019";
+title.textContent = "Lambda Times";
+temp.textContent ="98 Degrees";
+
+
+
+
+return header;
 }
+
+const newHeader = document.querySelector('.header-container');
+
+let menuHeader = Header();
+
+newHeader.appendChild(menuHeader);
+
+
