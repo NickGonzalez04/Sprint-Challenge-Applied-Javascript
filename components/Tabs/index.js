@@ -25,7 +25,7 @@ function tab(data){
 // Tab
     const tab = document.createElement('div');
 
-// Class names
+// Class name
     tab.classList.add('tab');
 // Set Content
     tab.textContent = data;
